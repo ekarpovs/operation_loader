@@ -17,15 +17,14 @@ _____
     |__ /operation_loader/ The package files
     |
 
-
 ## Local Installation
 
-    - Change dir to operation_loader
-    - Run the command:
-    ```bash
-    pip install -e .
-    ```
-  
+- Run the commands:
+
+```bash
+cd operation_loader
+pip install -e .
+```
 
 ## Usage
 
@@ -37,6 +36,6 @@ _____
 
 ## Run test
 
-    ```bash
-    python tester.py -p <path to a directory where a module is located> -f <function name in form module.func>
-    ```
+```bash
+python tester.py -p <path to a directory where a module is located> -f <function name in form module.func>
+```
