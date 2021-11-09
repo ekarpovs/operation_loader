@@ -39,3 +39,18 @@ def get_module_meta(module_name):
 
   return {'descr': mod.__doc__, 'func': func_names, 'meta': func_metas}
 
+
+def parse_oper_doc(doc):
+  lines = doc.strip().split('\n')
+  lines = [line.expandtabs().strip() for line in lines if len(line) > 0]
+  idx_s = lines.index('Parameters:')
+  description = lines[0:idx_s]
+  idx_e = lines.index('Returns:')
+  parameters = lines[idx_s+1:idx_e]
+  returns_doc = lines[idx_e+2:]
+  idx_s = parameters.index('- params:')
+  idx_e = parameters.index('- data:')
+  params_doc = parameters[idx_s+1:idx_e]
+  data_doc = parameters[idx_e+1:]
+  return (description, params_doc, data_doc, returns_doc)
+    
