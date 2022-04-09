@@ -23,7 +23,7 @@ _____
 
 ```bash
 cd operation_loader
-pip install -e .
+pip install . --use-feature=in-tree-build
 ```
 
 ## Usage
