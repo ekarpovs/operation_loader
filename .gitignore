@@ -1,5 +1,6 @@
 config.json
 .vscode
 operation_loader/__pycache__
+test/__pycache__
 operation_loader.egg-info
 *.bak
